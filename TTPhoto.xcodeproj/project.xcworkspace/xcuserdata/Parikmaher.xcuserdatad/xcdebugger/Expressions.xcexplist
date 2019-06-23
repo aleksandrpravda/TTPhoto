@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "AlbumsTableViewController.viewDidLoad():AlbumsTableViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "AlbumsTableViewController.tableView(_:cellForRowAt:):AlbumsTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "albums">
+            </PersistentString>
+            <PersistentString
+               value = "albums?[indexPath.row].localizedLocationNames">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AlbumsTableViewController.tableView(_:numberOfRowsInSection:):AlbumsTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "albums">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
