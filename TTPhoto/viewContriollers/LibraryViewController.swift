@@ -75,6 +75,7 @@ class LibraryViewController: UIViewController, UICollectionViewDataSource, UICol
                         case .done:
                             self.postBtn.isEnabled = false
                             self.identifiresToPost.removeAll()
+                            self.collectionView.reloadData()
                             break;
                         @unknown default:
                             break

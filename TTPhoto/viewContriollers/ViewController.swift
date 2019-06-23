@@ -10,17 +10,26 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        captureSessionManager?.weaklayer = self.previewView.videoPreviewLayer
-        captureSessionManager?.start()
+        self.captureSessionManager?.weaklayer = self.previewView.videoPreviewLayer
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.captureSessionManager?.start()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.captureSessionManager?.stop()
     }
     
     @IBAction func capturePhoto(_ sender: Any) {
         let videoPreviewLayerOrientation = previewView.videoPreviewLayer.connection?.videoOrientation
-        captureSessionManager?.capturePhoto(orientation: videoPreviewLayerOrientation!)
+        self.captureSessionManager?.capturePhoto(orientation: videoPreviewLayerOrientation!)
     }
     
     @IBAction func changwCamera(_ sender: Any) {
-        captureSessionManager?.changeCamera()
+        self.captureSessionManager?.changeCamera()
     }
     
     internal override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
